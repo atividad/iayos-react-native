@@ -10,6 +10,8 @@ import { SplashScreen, Stack } from "expo-router";
 import { useEffect } from "react";
 import "react-native-reanimated";
 import "../global.css";
+import { DEFAULT_THEME } from '@env';
+
 
 import GlobalProvider from "../context/GlobalProvider";
 import { useColorScheme } from "nativewind";
@@ -20,7 +22,9 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() { 
   const { colorScheme, setColorScheme } = useColorScheme();
-  setColorScheme("dark");
+  setColorScheme(DEFAULT_THEME);
+
+  console.log(`API URL is ${DEFAULT_THEME}`);
 
   const [fontsLoaded, error] = useFonts({
     "Poppins-Black": require("../assets/fonts/Poppins-Black.ttf"),

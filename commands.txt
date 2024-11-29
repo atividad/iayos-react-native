@@ -71,3 +71,24 @@ export default Slot;
 
 Great Expo template - Expo Router v3 & Nativewind v4
 https://www.youtube.com/watch?v=RsFoOlYj-gc
+
+
+https://medium.com/@dwinTech/how-to-set-up-env-for-a-react-native-app-337c3fba72af
+yarn add babel-plugin-dotenv-import --dev
+
+babel.config.js
+==========================================================
+module.exports = {
+  presets: ['module:metro-react-native-babel-preset'],
+  plugins: [
+    ['dotenv-import', {
+      moduleName: '@env',
+      path: '.env',
+    }],
+  ],
+};
+
+_layout.tsx
+==========================================================
+import { DEFAULT_THEME } from '@env';
+console.log(`API URL is ${DEFAULT_THEME}`);
