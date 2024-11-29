@@ -23,8 +23,7 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() { 
   const { colorScheme, setColorScheme } = useColorScheme();
   setColorScheme(DEFAULT_THEME);
-
-  console.log(`API URL is ${DEFAULT_THEME}`);
+ 
 
   const [fontsLoaded, error] = useFonts({
     "Poppins-Black": require("../assets/fonts/Poppins-Black.ttf"),
@@ -60,11 +59,8 @@ export default function RootLayout() {
         <Stack>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           <Stack.Screen name="(auth)" options={{ headerShown: false }} />
-          <Stack.Screen name="index" options={{ headerShown: false }} />
-          <Stack.Screen
-            name="search/[query]"
-            options={{ headerShown: false }}
-          />
+          {/* <Stack.Screen name="index" options={{ headerShown: false }} /> */}
+          {/* <Stack.Screen name="search/[query]" options={{ headerShown: false }}/> */}
           <Stack.Screen name="+not-found" />
         </Stack>
       </GlobalProvider>

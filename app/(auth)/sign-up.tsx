@@ -7,7 +7,7 @@ const SignUp = () => {
   return (
      <SafeAreaView className="flex-1 items-center justify-center bg-white dark:bg-black">      <Text className="color-primary text-3xl  font-pblack">Sign Up</Text>
       <StatusBar style="auto" />
-      <br />
+ 
       <Link href={"/"} className="color-blue-500">
         Home
       </Link>

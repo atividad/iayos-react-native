@@ -29,9 +29,7 @@ const SignIn = () => {
         otherStyles="mt-7"
       />
 
-
-
-      <br />
+ 
       <Link href={"/"} className="color-blue-500">
         Home
       </Link>
